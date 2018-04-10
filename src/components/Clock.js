@@ -19,6 +19,31 @@ class Clock extends Component {
         var bday = new Date(birthday)
         let today = new Date();
 
+        const currentMonth = today.getMonth();
+        const birthdayMonth = bday.getMonth();
+
+        if(birthMonth > currentMonth) {
+            bday.setFullYear(today.getFullYear());
+        }
+
+        else if (birthMonth < currentMonth) {
+            bday.setFullYear(today.getFullYear() + 1);
+        }
+
+        else if(birthMonth == currentMonth) {
+            const birthDay = bday.getDate();
+            const currentDay = today.getDate();
+            if(birthDay > currentDay) {
+                bday.setFullYear(today.getFullYear());
+            }
+    
+            else if (birthDay < currentDay) {
+                bday.setFullYear(today.getFullYear() + 1);
+            }
+        }
+
+
+
         var distance = bday.getTime() - today.getTime();
 
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
