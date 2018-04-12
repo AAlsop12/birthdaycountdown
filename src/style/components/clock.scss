@@ -1,6 +1,6 @@
 .countdown {
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
     background-color: var(--gray-primary);
     color: white;
     position: absolute;
@@ -14,7 +14,7 @@
     @include clock-dimensions;
     list-style-type: none;
     position: absolute;
-    top: 50%;
+    top: 52%;
     left: 50%;
     height: 20%;
     width: 71.2%;
@@ -70,4 +70,22 @@
     left: 10%;
     bottom: 5%;
     width: 100%;
+}
+
+ul {
+    top: 60%;
+}
+
+ul li {
+    list-style: none;
+    color: var(--yellow-secondary);
+    font-size: 22px;
+    font-family: var(--roboto-condensed)
+}
+
+ul p {
+    color: white;
+    font-size: 90px;
+    line-height: 115px;
+    
 }
