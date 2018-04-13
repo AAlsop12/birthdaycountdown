@@ -69,11 +69,11 @@
 
 
 .message-container__message {
+    @include center-item($pull-x: 0, $pull-y: 0, $top: 15%, $left: 10%);
     font-family: var(--roboto-condensed);
     font-size: 90px;
     font-weight: bold;
     width: 100%;
-    @include center-item($pull-x: 0, $pull-y: 0, $top: 15%, $left: 10%);
 }
 
 ul {
@@ -92,4 +92,8 @@ ul p {
     font-size: 90px;
     line-height: 115px;
     
+}
+
+.until-container {
+    @include center-item($top: 85%, $left: 50%);
 }
